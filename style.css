@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  font-family: "Courier New", monospace;
+  background: url('notes.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 20px;
+}
+
+body.home .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  background: #93e393 ;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  font-size: 16px;
+}
+button:hover {
+  background: #80cf43;
+}
+
+/* Routine page */
+body.routine h1 {
+  text-align: center;
+}
+
+input[type="time"], input[type="text"] {
+  margin: 5px;
+  padding: 9px;
+  border: 2.5px solid #333; 
+  margin-left: 110px;
+}
+
+.list {
+  margin-top: 37px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;   
+  justify-content: center;
+  margin-left: 500px;       
+  margin-right: auto;
+  font-size: 18px;
+}
+
+.routine-item {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.routine-item input[type="checkbox"] {
+  transform: scale(1.3);
+  margin-right: 8px;
+}
+
+body.log h1 {
+  text-align: center;
+}
+
+#logList {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 8px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.log-actions {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.routine-actions {
+  display: flex;
+  justify-content: flex-end;  
+  gap: 11px;                  
+  margin: -4px 45px;          
+}
+
+.routine-actions button,
+.routine-actions a button {
+  font-size: 16px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.routine-item .task-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.task-label {
+  flex: 0 1 auto;   
+}
+
+.mark-delete {
+  margin-left: 12px;
+  transform: scale(1.05);
+}
+
+.container {
+  text-align: center;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column; 
+  align-items: center;   
+  gap: 20px;              
+}

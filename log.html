@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Routine Logs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="log">
+  <h1>Daily Logs</h1>
+  <div id="logList"></div>
+  <div class="log-actions">
+    <a href="routine.html"><button>Back to Routine</button></a>
+  </div>
+
+  <script>
+    function loadLogs() {
+      const tasks = JSON.parse(localStorage.getItem("tasks") || "[]");
+      const logs = JSON.parse(localStorage.getItem("logs") || "{}");
+      const logEl = document.getElementById("logList");
+      logEl.innerHTML = "";
+
+      for (let day in logs) {
+        const dayTasks = logs[day].map(i => tasks[i]?.text).filter(Boolean);
+        const entry = document.createElement("div");
+        entry.innerHTML = `<b>${day}</b>: ${dayTasks.length ? dayTasks.join(", ") : "No tasks completed"}`;
+        logEl.appendChild(entry);
+      }
+    }
+    loadLogs();
+  </script>
+</body>
+</html>

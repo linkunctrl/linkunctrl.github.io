@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Routine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="routine">
+  <h1>My Daily Routine</h1>
+
+  <div class="routine-inputs">
+    <input type="time" id="timeInput">
+    <input type="text" id="taskInput" placeholder="Task">
+    <button onclick="addTask()">Add</button>
+  </div>
+  
+  <div class="routine-actions">
+    <button onclick="clearAll()">Clear All</button>
+    <a href="log.html"><button>View Logs</button></a>
+  </div>
+
+  <div class="list" id="routineList"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
